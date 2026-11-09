@@ -3,8 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&family=Sigmar&family=Sigmar+One&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interaktiv SVG | Eventnavn</title>
+  <title>Kort og program | Pets & friends</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,13 +22,19 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./"><img src="img/logo.png" alt=""></a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button popovertarget="menu">
+          <div class="container" onclick="mypaw(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
         <ul class="menu" id="menu" popover>
           <li><a href="./">Forside</a></li>
-          <li><a href="./svg.html" aria-current="page">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html" aria-current="page">Kort</a></li>
+          <li><a href="./form.html">Bestil</a></li>
         </ul>
       </nav>
     </div>
@@ -58,8 +74,31 @@
 
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+      <div>
+        <img class="site-logo" src="img/f_logo.png">
+        <p>En dag for alle dine venner</p>
+        <div class="kontakt">
+          <h4>Kontakt os</h4>
+          <p>petsnfriends@email.com<br>+45 34 64 98 20</p>
+        </div>
+        <div class="some"><a href="./index.html"><img src="img/insta.png"></a><a href="./index.html"><img
+              src="img/face.png"></a><a href="./index.html"><img src="img/tiktok.png"></a></div>
+      </div>
+      <div>
+        <div class="footerlink">
+          <h4>Om os</h4>
+          <h4>FAQ</h4>
+          <h4>Bliv frivilig</h4>
+        </div>
+        <div>
+          <p class="pbig">Søndermarken <br>
+            Pile Allé 55, 2000 <br>Frederiksberg</p>
+        </div>
+        <div class="footerandet">
+          <p>©2026petsnfriends</p>
+          <p>Privacy policy</p>
+        </div>
+      </div>
     </div>
   </footer>
   <script src="./script.js"></script>

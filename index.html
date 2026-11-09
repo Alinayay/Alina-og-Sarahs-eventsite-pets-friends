@@ -3,8 +3,18 @@
 
 <head>
   <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lilita+One&family=Sigmar&family=Sigmar+One&display=swap"
+    rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventnavn</title>
+  <title>Pets & friends</title>
   <link rel="stylesheet" href="./starter.css">
   <link rel="stylesheet" href="./style.css">
 </head>
@@ -12,24 +22,178 @@
 <body>
   <header class="site-header">
     <div class="header-content">
-      <a class="site-logo" href="./">Eventnavn</a>
+      <a class="site-logo" href="./"><img src="img/logo.png"></a>
       <nav class="site-nav">
-        <button>Menu</button>
+        <button class="bm" popovertarget="menu">
+          <div class="container" onclick="mypaw(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+        </button>
         <ul class="menu" id="menu" popover>
           <li><a href="./" aria-current="page">Forside</a></li>
-          <li><a href="./svg.html">Interaktiv SVG</a></li>
-          <li><a href="./form.html">Formular</a></li>
+          <li><a href="./svg.html">Kort</a></li>
+          <li><a href="./form.html">Bestil</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div>
+          <h1>Pets & friends</h1>
+          <h2>En dag for alle dine venner, selv de mindste!</h2>
+          <a href="./form.html"><img class="CTALP" src="img/CTAP.webp"></a>
+        </div>
+        <div><img src="img/heroB.webp"></div>
+        <img class="paws_deco" src="img/paws_deco.png">
+      </div>
+    </section>
+    <section class="full">
+      <h2>D. 21 - 22 MAJ 2027</h2>
+    </section>
+    <section>
+      <div>
+        <h2>Dagens program!</h2>
+        <h3>Her kan du læse lidt om de ting som vi tilbyder under eventet</h3>
+      </div>
 
+      <div class="cards-grid">
+        <button popovertarget="akt">
+          <div class="card"><img src="img/aktiviteter.webp">
+            <p class="polaroidtxt">Aktiviteter</p>
+          </div>
+        </button>
+        <button popovertarget="bod">
+          <div class="card"><img src="img/boder.webp">
+            <p class="polaroidtxt">Boder</p>
+          </div>
+        </button>
+        <button popovertarget="vel">
+          <div class="card"><img src="img/charity.webp">
+            <p class="polaroidtxt">Velgørenhed</p>
+          </div>
+        </button>
+      </div>
+      <div id="akt" popover>
+        <div>
+          <h3>Aktiviteter</h3>
+        </div>
+        <div>
+          <p>Under eventet udbyder vi en masse forskellige aktiviteter for alle vores besøgende, selv dem med pels,
+            potter, fjer eller andet.<br> Vi tilbyder bla.</p>
+          <dl>
+            <dt>Adoptions café</dt>
+            <dd>Kom og mød nogle søde dyr som mangler et hjem under trykke rammer
+            </dd>
+            <dt>Donations bod</dt>
+            <dd>Lær om forskellige velgørenheder som Pets & friends støtter
+            </dd>
+            <dt>Fri legs område</dt>
+            <dd>Har dine dyr brug for at brande noget krudt af? her kan dit kæledyr løbe frit rundt i et sikkert område
+              (området er inddelt iforhold til dyrearter for alles sikkerhed)</dd>
+          </dl>
+          <p>Du kan finde flere af vores aktiviteter her</p>
+          <a href="./svg.html"><img class="CTAslm" src="img/CTAslm.png"></a>
+        </div>
+      </div>
+      <div id="bod" popover>
+        <h3>Boder</h3>
+        <div>
+          <div>
+            <p>Med et event som dette er det vigtigt at vi også tilbyder mad men da vi har gæster af mange forskellige
+              arter har vi gjort vores bedste med at tilbyde meget varierende mad. <br> Madden til mennesker og madden
+              til
+              vores mindrer venner ville være tydeligt markeret og er lokaliseret i forskellige steder af parken. <br>
+              Vi
+              tilbyder mad til dyr som hunde, katte, fisk, fugle og kaniner.</p>
+            <p>Du kan finde madbodernes lokation via kortet her.</p><a href="./svg.html">
+              <img class="CTAslm" src="img/CTAslm.png"></a>
+          </div>
+        </div>
+      </div>
+      <div id="vel" popover>
+        <h3>Velgørenhed</h3>
+        <div>
+          <p>Vi elsker vores pelsede venner og derfor vil vi gerne hjælpe med at gøre verdnen et bedre sted for dem, 50%
+            af billet salget går til 3 forskellige lokale velgørenheder. <br> Der ville også være muglighed for at mode
+            forpersoner fra velgørenhederne og lære mere om det vigtige arbejde de laver.</p>
+          <dl>
+            <dt>Dyrenes beskyttelse</dt>
+            <dd><a href="https://www.dyrenesbeskyttelse.dk" target="_blank">Besøg deres hjemmeside!</a>
+            </dd>
+            <dt>Dyreværnet</dt>
+            <dd><a href="https://dyrevaernet.dk/" target="_blank">Besøg deres hjemmeside!</a>
+            </dd>
+            <dt>Dyrenes Alliance</dt>
+            <dd><a href="https://dyrenesalliance.dk/" target="_blank">Besøg deres hjemmeside!</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <div class="full-z">
+      <h2>Vi arbejder sammen med ZOO!</h2>
+    </div>
+    <section class="zoo">
+      <div class="zoo-content">
+        <div>
+          <p>Vi ønsker at vores event ikke bare skabber rum for forskellige kæledyr ejere så de kan socialicer men vi
+            ville også gerne skabbe rum for at lære om og af naturen omkring os, derfor er vi med til at støtte zoo’s
+            mission.<br><br>
+            Hvis du ikke allerede vidte det så er zoo mere end bare et sted man kan interegere med eksotiske dyr, zoo
+            arbejder også på at bevare verdnens natur og underviser andre i hvordan vi kan bevare vores mange
+            skrøblige
+            økosys temer. Du kan læse mere om på zoo’s <a class="plink"
+              href="https://www.zoo.dk/projekter">hjemmeside</a>
+            <br><br>
+            zoo er derfor sponsoren bag oplægs scenen hvor du kan lære en masse om planetens mange dyr, hvordan vi
+            bedst
+            kan passe på dem og meget andet.
+            <a href="./index.html"><img class="CTAsO" src="img/CTAsO.webp"></a>
+          </p>
+        </div>
+        <div class="zooP"><img src="img/zoo.webp">
+          <p class="polaroidtxt">♡‎</p>
+        </div>
+      </div>
+      <img class="flip_deco" src="img/flip_deco.png">
+    </section>
+    <section class="teaser">
+      <h2>Udforsk kortet</h2>
+      <h3>Her kan du udforske kortet til Pets & friends og planlæg din dag!</h3>
+      <div class="teaserB"></div>
+    </section>
+  </main>
   <footer class="site-footer">
     <div class="footer-content">
-      <p>Eventnavn</p>
-      <p>Footer</p>
+      <div>
+        <img class="site-logo" src="img/f_logo.png">
+        <p>En dag for alle dine venner</p>
+        <div class="kontakt">
+          <h4>Kontakt os</h4>
+          <p>petsnfriends@email.com<br>+45 34 64 98 20</p>
+        </div>
+        <div class="some"><a href="./index.html"><img src="img/insta.png"></a><a href="./index.html"><img
+              src="img/face.png"></a><a href="./index.html"><img src="img/tiktok.png"></a></div>
+      </div>
+      <div>
+        <div class="footerlink">
+          <h4>Om os</h4>
+          <h4>FAQ</h4>
+          <h4>Bliv frivilig</h4>
+        </div>
+        <div>
+          <p class="pbig">Søndermarken <br>
+            Pile Allé 55, 2000 <br>Frederiksberg</p>
+        </div>
+        <div class="footerandet">
+          <p>©2026petsnfriends</p>
+          <p>Privacy policy</p>
+        </div>
+      </div>
     </div>
   </footer>
   <script src="./script.js"></script>
