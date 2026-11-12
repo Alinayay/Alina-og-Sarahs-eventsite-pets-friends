@@ -401,8 +401,8 @@ summary::marker {
     max-width: 190px;
     height: auto;
     display: block;
-    bottom: 31rem;
-    right: 378px;
+    bottom: 31.5rem;
+    right: 70px;
     transform: rotate(-7deg);
     position: absolute;
   }
