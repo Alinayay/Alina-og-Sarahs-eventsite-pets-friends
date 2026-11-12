@@ -43,28 +43,91 @@
   <main>
     <section class="svg-page">
       <header class="svg-intro">
-        <h1>Interaktiv SVG</h1>
-        <p>Indsæt din egen SVG og forbind den med punkterne nedenfor.</p>
+        <h2>Program og kort</h2>
+        <p class="pbig-op">Her kan du udforske kortet til Pets & friends og planlæg din dag! <br>læs alt om de
+          forskellige
+          områder og se
+          figuren på kortet bevæge sig.</p>
+        <img class="turt_deco" src="img/turt_deco.png">
       </header>
-
       <section class="svg-layout">
-        <div class="svg-placeholder"></div>
-
+        <div><svg class="event-map" viewBox="0 0 1785.78 1004.5">
+            <use class="baggrund" href="img/map.svg#baggrund"></use>
+            <use class="wc" href="img/map.svg#wc"></use>
+            <use class="figur" href="img/map.svg#figur"></use>
+            <use class="pil" href="img/map.svg#pil"></use>
+          </svg>
+        </div>
         <article class="panel">
-          <h2>Udforsk eventet</h2>
+          <h3>Udforsk eventet</h3>
+          <p id="besked" aria-live="polite">Vælg et område.</p>
           <div class="accordion">
-            <!-- TODO: Lav om til details/summary -->
-            <div class="accordion-item">
-              <h3>Punkt 1</h3>
-              <p>Beskriv første område, aktivitet eller del af dit event.</p>
+            <div class="ac1">
+              <h4>Oplevelser</h4>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-adoption">Adoptions café</summary>
+                <p>Kom og mød nogle søde dyr som mangler et hjem under trykke rammer</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-dono">Donations bod</summary>
+                <p>Lær om forskellige velgørenheder som Pets & friends støtter</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-frilej">Fri legs område</summary>
+                <p>Har dine dyr brug for at brande noget krudt af? her kan dit kæledyr løbe frit rundt i et sikkert
+                  område (området er inddelt iforhold til dyrearter for alles sikkerhed)</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-scene">Oplægs scenen</summary>
+                <p>Kom og lyt til forskellige oplæg om dyr holdt af eksperter (i sammenarbejde med zoo)</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-social">Socialisering område</summary>
+                <p>Kom og mød andre dyre ejere og skab fællesskaber</p>
+              </details>
             </div>
-            <div class="accordion-item">
-              <h3>Punkt 2</h3>
-              <p>Beskriv andet område, aktivitet eller del af dit event.</p>
+            <div class="ac2">
+              <h4>Mad & Shops</h4>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-folk-mad">Foodtrucks til mennesker</summary>
+                <p>Vi tilbyder selvfølgelig mad og andre forfriskninger (mad til mennesker ville
+                  være tydeligt vist og væk fra dyre madden)</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-dyr-mad">Foodtrucks til dyr</summary>
+                <p>Vi tilbyder selvfølgelig mad og andre forfriskninger til de mange dyr som
+                  besøger os, vi kan desværre ikke tilbyde mad til alle men der mad til hunde, katte, fisk, fugle og
+                  kaniner (mad til kæledyr ville være tydeligt vist og væk fra menneske madden)</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-butik-bod">Butik boder</summary>
+                <p>Besøg de mange forskellge boder hvor du kan finde de bedste lejetøj, mad og andet tilbehør.</p>
+              </details>
             </div>
-            <div class="accordion-item">
-              <h3>Punkt 3</h3>
-              <p>Beskriv tredje område, aktivitet eller del af dit event.</p>
+            <div class="ac3">
+              <h4>Andet</h4>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-ind">Indgang</summary>
+                <p>Hvis man ikke har fået købt billet før eventet starter kan man købe et ved indgangen, men man ville
+                  desværre ikke få et personliggjort pas og vi kan ikke garantere at man kan få den goodie-bag som man
+                  ønsker</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-ud">Udgang</summary>
+                <p>For at holde det bedste event ville vi gerne undgå at forstyrre parkens andre gæster og derfor er
+                  tydeligt afgrænset.</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-info">Informations boden</summary>
+                <p>Hvis du har brug for hjælp eller har nogen problemer kan du altid finde hjælp i informationsboden som
+                  lægger lige ved indgangen. Ellers ville der være frivillige iklædt orange t-shirts omkring parken som
+                  også kan hjælpe.</p>
+              </details>
+              <details class="accordion-item" name="my-detail">
+                <summary id="pick-wc">Toiletter</summary>
+                <p>Der ville være flere toiletter placeret i parken samt standere med poser til at samle afføring op.
+                </p>
+              </details>
             </div>
           </div>
         </article>
