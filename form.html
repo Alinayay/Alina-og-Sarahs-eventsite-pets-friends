@@ -43,11 +43,125 @@
   <main>
     <section class="form-page">
       <header class="form-intro">
-        <h1>Formular</h1>
-        <p>Lav en formular, der sender brugeren videre til opsamlingssiden.</p>
+        <h2>Personliggøre dit pas</h2>
+        <p class="pbig-op">Her kan du personliggør dit pas ved at svare på nogle spørgsmål omkring dig selv og dit
+          kæledyr.</p>
+        <div class="opret-div">
+          <h3>Opret dit pas</h3>
+          <ol type="1">
+            <li>
+              <p class="pbig">Fortæl os lidt om dig selv og dit kæledyr.</p>
+            </li>
+            <li>
+              <p class="pbig">Vælg en stil til dit pas så det passer din stil</p>
+            </li>
+            <li>
+              <p class="pbig">Generér passet, køb din billet og få et digital pas.</p>
+            </li>
+          </ol>
+          <p class="pbig-op">Når du møder op til eventet, får du udleveret dit personlige pas samt den valgte goodie-bag
+            fysisk.</p>
+        </div>
       </header>
 
-      <form class="form-placeholder" action="./opsamling.html"></form>
+      <form class="form" action="./opsamling.html">
+        <label for="field-navn">Hvad ville du kaldes?</label>
+        <input type="text" id="field-navn" name="navn">
+        <fieldset>
+          <legend>Tager du dit kæledyr med?</legend>
+          <label for="field-bring-pet-1">
+            <input type="radio" id="field-bring-pet-1" name="bring-pet" value="ja">
+            Ja
+          </label>
+          <label for="field-bring-pet-2">
+            <input type="radio" id="field-bring-pet-2" name="bring-pet" value="nej">
+            Nej
+          </label>
+        </fieldset>
+        <div>
+          <label for="field-pet-name">Hvad hedder dit kæledyr?</label>
+          <input type="text" id="field-pet-name" name="pet-name">
+          <label for="field-pet-type">Hvilket slags dyr er det?</label>
+          <input type="text" id="field-pet-type" name="pet-type" placeholder="fx. Fransk Bulldog">
+        </div>
+        <fieldset>
+          <legend>Hvad ønsker du at få ud af eventet?</legend>
+          <label for="field-interest-1">
+            <input type="checkbox" id="field-interest-1" name="interest" value="community">
+            Finde et fællesskab og sicialisere med andre kæledyrs ejere
+          </label>
+          <label for="field-interest-2">
+            <input type="checkbox" id="field-interest-2" name="interest" value="viden">
+            Få mere viden om dyr fra oplægsholderne
+          </label>
+          <label for="field-interest-3">
+            <input type="checkbox" id="field-interest-3" name="interest" value="snacks">
+            Undersøge og finde nye alternativer til snacks og legetøj
+          </label>
+          <label for="field-interest-4">
+            <input type="checkbox" id="field-interest-4" name="interest" value="hygge">
+            En sjov dag i parken med mit kæledyr
+          </label>
+          <label for="field-interest-5">
+            <input type="checkbox" id="field-interest-5" name="interest" value="adoption">
+            Besøge adoptions caféen og muligvis tag en ny ven med hjem.
+          </label>
+        </fieldset>
+        <label for="field-dato">Hvilke(n) dag(e) deltager du i?</label>
+        <select id="field-dato" name="dato">
+          <option value="">Vælg en eller begge dage</option>
+          <option value="dag1">21. maj</option>
+          <option value="dag2">22. maj</option>
+          <option value="dag1-2">21. og 22. maj</option>
+        </select>
+        <fieldset>
+          <legend>Hvilket tema skal dit pas og goodie-bag have?</legend>
+          <label for="field-tema-1">
+            <input type="radio" id="field-tema-1" name="tema" value="hund">
+            Hund
+          </label>
+          <label for="field-tema-2">
+            <input type="radio" id="field-tema-2" name="tema" value="kat">
+            Kat
+          </label>
+          <label for="field-tema-3">
+            <input type="radio" id="field-tema-3" name="tema" value="fugl">
+            Fugl
+          </label>
+          <label for="field-tema-4">
+            <input type="radio" id="field-tema-4" name="tema" value="fisk">
+            Fisk
+          </label>
+          <label for="field-tema-5">
+            <input type="radio" id="field-tema-5" name="tema" value="kanin">
+            Kanin
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>Vælg et farvetema til dit pas</legend>
+          <label for="field-farve-tema-1">
+            <input type="radio" id="field-farve-tema-1" name="farve-tema" value="pink">
+            Pink
+          </label>
+          <label for="field-farve-tema-2">
+            <input type="radio" id="field-farve-tema-2" name="farve-tema" value="orange">
+            Orange
+          </label>
+          <label for="field-farve-tema-3">
+            <input type="radio" id="field-farve-tema-3" name="farve-tema" value="green">
+            Grøn
+          </label>
+          <label for="field-farve-tema-4">
+            <input type="radio" id="field-farve-tema-4" name="farve-tema" value="blue">
+            Blå
+          </label>
+          <label for="field-farve-tema-5">
+            <input type="radio" id="field-farve-tema-5" name="farve-tema" value="purple">
+            Lilla
+          </label>
+        </fieldset>
+        <button type="submit"><img src="img/lav-pas.png"></button>
+      </form>
     </section>
   </main>
 
