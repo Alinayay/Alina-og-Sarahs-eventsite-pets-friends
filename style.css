@@ -133,7 +133,7 @@ main > * {
     max-width: 255px;
     height: auto;
     display: block;
-    bottom: 28%;
+    bottom: 42%;
     left: 2%;
     position: absolute;
   }
@@ -144,8 +144,8 @@ main > * {
     max-width: 200px;
     height: auto;
     display: block;
-    top: 210%;
-    right: 6%;
+    top: 170%;
+    right: 13%;
     position: absolute;
   }
 }
@@ -808,8 +808,8 @@ select,
     max-width: 135px;
     height: auto;
     display: block;
-    top: 60%;
-    left: 33%;
+    top: 50%;
+    left: 35.5%;
     transform: rotate(-7deg);
     position: absolute;
   }
@@ -1042,4 +1042,17 @@ button {
 .accordion-item p {
   padding: 0 var(--space-1) var(--space-1);
   color: var(--color-muted);
+}
+@keyframes flyt-mod-hoejre {
+  from {
+    translate: 0px 0px;
+  }
+  to {
+    translate: 90px 0px;
+  }
+}
+.cards-grid {
+  animation: flyt-mod-hoejre linear both;
+  animation-timeline: view();
+  animation-range: 0% 60%;
 }
