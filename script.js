@@ -12,7 +12,91 @@ if (opsamlingPlaceholder) {
 function mypaw(x) {
   x.classList.toggle("change");
 }
+// formel side
+const bringPet = document.querySelectorAll('input[name="bring-pet"]');
+const petInfo = document.querySelector(".pet-info");
+bringPet.forEach((radio) => {
+  radio.addEventListener("change", function () {
+    if (this.value === "ja") {
+      petInfo.style.display = "grid";
+    } else {
+      petInfo.style.display = "none";
+    }
+  });
+});
+// opsamlings kode
+const eventPass = document.querySelector(".event-pass");
+if (eventPass) {
+  console.log(eventPass);
+  const output_navn = document.querySelector("#opnavn");
+  const output_titel = document.querySelector("#optitel");
+  const output_petname = document.querySelector("#oppet-name");
+  const output_pettype = document.querySelector("#oppet-type");
+  const params = new URLSearchParams(window.location.search);
+  const navn = params.get("navn");
+  const titel = params.get("titel");
+  const petName = params.get("pet-name");
+  const petType = params.get("pet-type");
+  output_navn.textContent = navn;
+  output_titel.textContent = titel;
+  output_petname.textContent = petName;
+  output_pettype.textContent = petType;
+  const output_dato = document.querySelector("#opdato");
+  const dato = params.get("dato");
+  output_dato.textContent = dato;
+
+  const output_opowner_type = document.querySelector("#opowner-type");
+  const output_opowner_type_info = document.querySelector("#opowner-type-info");
+  const ownertype = params.get("ownertype");
+  output_opowner_type.textContent = ownertype;
+  if (ownertype === "Lover of pets") {
+    output_opowner_type_info.textContent =
+      "du elsker dit kæledyr ligeså meget (eller mere) end dine familie og venner, det dig og dem mod resten af verdnen.";
+  } else if (ownertype === "Pet træner") {
+    output_opowner_type_info.textContent =
+      "du elsker at lære dit kæledyr alle mulige tricks, når det kommer til at vise dit dem frem så er du slet ikke genert.";
+  } else if (ownertype === "Pet fotograf") {
+    output_opowner_type_info.textContent =
+      "du typen som elsker at fange alle de søde, sjove og bedste momenter af dit kæledyr, og selvfølgelig skal alle se dem.";
+  } else if (ownertype === "Pet newbie") {
+    output_opowner_type_info.textContent =
+      "du helt ny når det kommer til at eje kæledyr og der meget du ikke ved endnu, men du villig til at lære og gøre dit bedste.";
+  } else if (ownertype === "Pet uvidende") {
+    output_opowner_type_info.textContent =
+      "du ved intet hvordan det er at eje et kæledyr, men du elsker dem og har flere gange overvejet at stjæle dine venners kæledyr.";
+  }
+  const output_interest = document.querySelector("#opinterests");
+  const chosenInterest = params.getAll("interest");
+  if (chosenInterest.length > 0) {
+    output_interest.innerHTML = chosenInterest
+      .map((currentValue) => `<li>${currentValue}</li>`)
+      .join("");
+  } else {
+    output_interest.innerHTML =
+      "<li>Der var ikke noget du ønskede ud af eventet...?</li>";
+  }
+
+  const temaImage = document.querySelector(".tema-id");
+  const temaIcon = document.querySelector("#tema-ikon");
+  const tema = params.get("tema");
+  if (tema === "hund") {
+    temaImage.src = "img/tema-hund.png";
+  } else if (tema === "kat") {
+    temaImage.src = "img/tema-kat.png";
+    temaIcon.src = "img/paws_deco.png";
+  } else if (tema === "fugl") {
+    temaImage.src = "img/tema-fugl.png";
+    temaIcon.src = "img/claw_deco.png";
+  } else if (tema === "fisk") {
+    temaImage.src = "img/tema-fisk.png";
+    temaIcon.src = "img/algae_deco.png";
+  } else if (tema === "kanin") {
+    temaImage.src = "img/tema-kanin.png";
+  }
+}
+
 // svg kode
+
 document.querySelector("#pick-ind").addEventListener("click", pickInd);
 
 function pickInd() {
