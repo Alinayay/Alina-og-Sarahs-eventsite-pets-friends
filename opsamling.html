@@ -52,36 +52,49 @@
           <a href="./404.html"><img src="img/bestil-pas.png"></a>
           <a href="./form.html"><img src="img/lav-nyt-pas.png"></a>
         </div>
+        <img class="turt_deco" src="img/turt_deco.png">
       </div>
-      <article class="opsamling">
-        <div class="event-pass">
+      <div class="event-pass">
+        <div id="pass">
+          <div id="passhul"></div>
           <div class="data">
-            <h2>GUEST BADGE</h2>
+            <h2 id="gb">GUEST BADGE</h2>
             <p class="popsamad">Søndermarken Pile Allé 55, 2000 Frederiksberg</p>
             <div class="name-section">
-              <img class="tema-id" src="img/tema-fisk.png" alt="tema id billed">
-              <h3><span id="optitel"></span></h3>
-              <h4><span id="opnavn"></span> er ansvarlig for <span id="oppet-name"></span> en <span
-                  id="oppet-type"></span></h4>
+              <img class="tema-id" src="" alt="tema id billed">
+              <div class="opnavn-section">
+                <h3><span id="optitel"></span></h3>
+                <h4><span id="opnavn"></span> er ansvarlig for <span id="oppet-name"></span> en <span
+                    id="oppet-type"></span>
+                </h4>
+              </div>
             </div>
-            <div>
-              <h3>Du er en <span id="opowner-type"></span></h3>
+            <div class="opowner-type-section">
+              <h3 id="pass-titel">Du er en <span id="opowner-type"></span></h3>
               <h4><span id="opowner-type-info"></span></h4>
             </div>
-            <div>
-              <h3>Du bør besøge</h3>
+            <div class="interests-sektion">
+              <h3 class="pass-titel">Du bør besøge</h3>
               <ul id="opinterests"></ul>
             </div>
-            <img id="tema-ikon" src="img/algae_deco.png">
-            <div><img src="img/logo.png" alt="">
-              <h3><span id="opdato"></span></h3>
+            <div class="pass-bund">
+              <img class="pass-logo" src="img/logo.png" alt="">
+              <div id="datoogtemaikon">
+                <img id="tema-ikon" src="" alt="tema ikon billed">
+                <h3><span id="opdato"></span></h3>
+              </div>
             </div>
           </div>
         </div>
-      </article>
+      </div>
     </section>
+    <div class="toggle">
+      <label>
+        <span class="visually-hidden">Theme</span>
+        <input id="theme-toggle" type="checkbox">
+      </label>
+    </div>
   </main>
-
   <footer class="site-footer">
     <div class="footer-content">
       <div>
