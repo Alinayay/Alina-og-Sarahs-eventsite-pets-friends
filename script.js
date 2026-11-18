@@ -12,6 +12,24 @@ if (opsamlingPlaceholder) {
 function mypaw(x) {
   x.classList.toggle("change");
 }
+// dark mode
+
+const html = document.querySelector("html");
+const toggleSwitch = document.querySelector("#theme-toggle");
+
+function handleThemeChange() {
+  const isDark = toggleSwitch.checked;
+  html.classList.toggle("dark", isDark);
+  localStorage.setItem("isDarkMode", isDark);
+}
+function getSavedTheme() {
+  const isDark = localStorage.getItem("isDarkMode") === "true";
+  html.classList.toggle("dark", isDark);
+  toggleSwitch.checked = isDark;
+}
+getSavedTheme();
+toggleSwitch?.addEventListener("change", handleThemeChange);
+
 // formel side
 const bringPet = document.querySelectorAll('input[name="bring-pet"]');
 const petInfo = document.querySelector(".pet-info");
@@ -81,17 +99,81 @@ if (eventPass) {
   const tema = params.get("tema");
   if (tema === "hund") {
     temaImage.src = "img/tema-hund.png";
+    temaIcon.src = "img/d-hund.png";
   } else if (tema === "kat") {
     temaImage.src = "img/tema-kat.png";
-    temaIcon.src = "img/paws_deco.png";
+    temaIcon.src = "img/d-kat.png";
   } else if (tema === "fugl") {
     temaImage.src = "img/tema-fugl.png";
-    temaIcon.src = "img/claw_deco.png";
+    temaIcon.src = "img/d-fugl.png";
   } else if (tema === "fisk") {
     temaImage.src = "img/tema-fisk.png";
-    temaIcon.src = "img/algae_deco.png";
+    temaIcon.src = "img/d-fisk.png";
   } else if (tema === "kanin") {
     temaImage.src = "img/tema-kanin.png";
+    temaIcon.src = "img/d-kanin.png";
+  }
+
+  const Pass = document.querySelector("#pass");
+  const gB = document.querySelector("#gb");
+  const opNavn = document.querySelector("#opnavn");
+  const opPetNavn = document.querySelector("#oppet-name");
+  const opPetType = document.querySelector("#oppet-type");
+  const ownerType = document.querySelector(".pass-titel");
+  const interestList = document.querySelector("#pass-titel");
+  const ownerTypeInfo = document.querySelector("#opowner-type-info");
+  const opInterests = document.querySelector("#opinterests");
+  const farveTema = params.get("farve-tema");
+  if (farveTema === "pink") {
+    Pass.style.backgroundColor = "#FDC6D5";
+    gB.style.color = "#ED93B7";
+    opNavn.style.color = "#BF4D67";
+    opPetNavn.style.color = "#BF4D67";
+    opPetType.style.color = "#BF4D67";
+    ownerType.style.color = "#BF4D80";
+    interestList.style.color = "#BF4D80";
+    ownerTypeInfo.style.color = "#ED93B7";
+    opInterests.style.color = "#D76995";
+  } else if (farveTema === "orange") {
+    Pass.style.backgroundColor = "#FDD1A4";
+    gB.style.color = "#EBAC6C";
+    opNavn.style.color = "#8A3A09";
+    opPetNavn.style.color = "#8A3A09";
+    opPetType.style.color = "#8A3A09";
+    ownerType.style.color = "#D37236";
+    interestList.style.color = "#D37236";
+    ownerTypeInfo.style.color = "#EBAC6C";
+    opInterests.style.color = "#DF9B56";
+  } else if (farveTema === "green") {
+    Pass.style.backgroundColor = "#AEE3AD";
+    gB.style.color = "#7FC675";
+    opNavn.style.color = "#396150";
+    opPetNavn.style.color = "#396150";
+    opPetType.style.color = "#396150";
+    ownerType.style.color = "#417E4A";
+    interestList.style.color = "#417E4A";
+    ownerTypeInfo.style.color = "#7FC675";
+    opInterests.style.color = "#73B36A";
+  } else if (farveTema === "blue") {
+    Pass.style.backgroundColor = "#BBD8EA";
+    gB.style.color = "#76B3E2";
+    opNavn.style.color = "#224E69";
+    opPetNavn.style.color = "#224E69";
+    opPetType.style.color = "#224E69";
+    ownerType.style.color = "#2D729C";
+    interestList.style.color = "#2D729C";
+    ownerTypeInfo.style.color = "#76B3E2";
+    opInterests.style.color = "#4987B7";
+  } else if (farveTema === "purple") {
+    Pass.style.backgroundColor = "#D7BEF5";
+    gB.style.color = "#967BB8";
+    opNavn.style.color = "#502E7B";
+    opPetNavn.style.color = "#502E7B";
+    opPetType.style.color = "#502E7B";
+    ownerType.style.color = "#7f55b3";
+    interestList.style.color = "#7f55b3";
+    ownerTypeInfo.style.color = "#967BB8";
+    opInterests.style.color = "#906DBD";
   }
 }
 
