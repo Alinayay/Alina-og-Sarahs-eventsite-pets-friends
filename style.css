@@ -36,46 +36,12 @@ html {
 html.dark {
   color-scheme: dark;
 }
-.toggle {
-  position: fixed;
-  bottom: 5px;
-  right: 15px;
-  z-index: 1000;
-}
-#theme-toggle {
-  appearance: none;
-  background: var(--color-page);
-  height: var(--space-2);
-  width: 3.5rem;
-  border: 2px solid #4c6f8a;
-  cursor: pointer;
-  border-radius: 9999px;
-}
-#theme-toggle::before {
-  content: "⏾";
-  color: #1c1d1d;
-  padding: 2.5px;
-  height: 100%;
-  aspect-ratio: 1;
-  background: var(--color-blue) content-box;
-  border-radius: 50px;
-  transition: 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#theme-toggle:checked::before {
-  content: "☀︎︎";
-  color: #f2f6f7;
-  background-color: #4c6f8a;
-  translate: calc(3.5rem - var(--space-2));
-}
 @font-face {
   font-family: myFont;
   src: url(/font/Bellise\ Free.otf);
 }
 .polaroidtxt {
-  font-family: "myFont";
+  font-family: "myFont", "Brush Script MT", cursive;
   font-size: 60px;
   text-align: center;
 }
@@ -1144,7 +1110,40 @@ select,
     margin-top: var(--space-1);
   }
 }
-
+.toggle {
+  position: fixed;
+  bottom: 5px;
+  right: 15px;
+  z-index: 1000;
+}
+#theme-toggle {
+  appearance: none;
+  background: var(--color-page);
+  height: var(--space-2);
+  width: 3.5rem;
+  border: 2px solid #4c6f8a;
+  cursor: pointer;
+  border-radius: 9999px;
+}
+#theme-toggle::before {
+  content: "⏾";
+  color: #1c1d1d;
+  padding: 2.5px;
+  height: 100%;
+  aspect-ratio: 1;
+  background: var(--color-blue) content-box;
+  border-radius: 50px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#theme-toggle:checked::before {
+  content: "☀︎︎";
+  color: #f2f6f7;
+  background-color: #4c6f8a;
+  translate: calc(3.5rem - var(--space-2));
+}
 /* Navigation */
 [popover] {
   margin: 0;
