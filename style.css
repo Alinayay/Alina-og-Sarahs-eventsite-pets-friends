@@ -43,30 +43,32 @@ html.dark {
   z-index: 1000;
 }
 #theme-toggle {
-  --h: 2rem;
-  --w: 3rem;
-  font: inherit;
   appearance: none;
   background: var(--color-page);
-  height: var(--h);
-  width: var(--w);
+  height: var(--space-2);
+  width: 3.5rem;
   border: 2px solid #4c6f8a;
   cursor: pointer;
   border-radius: 9999px;
 }
 #theme-toggle::before {
-  content: "";
-  display: block;
-  padding: 3px;
+  content: "⏾";
+  color: #1c1d1d;
+  padding: 2.5px;
   height: 100%;
   aspect-ratio: 1;
   background: var(--color-blue) content-box;
-  border-radius: inherit;
+  border-radius: 50px;
   transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #theme-toggle:checked::before {
-  background-color: var(--color-dblue);
-  translate: calc(var(--w) - var(--h));
+  content: "☀︎︎";
+  color: #f2f6f7;
+  background-color: #4c6f8a;
+  translate: calc(3.5rem - var(--space-2));
 }
 @font-face {
   font-family: myFont;
