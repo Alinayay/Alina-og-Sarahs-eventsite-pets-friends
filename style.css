@@ -703,6 +703,7 @@ select,
   border-radius: 8px;
   padding: 0.4rem;
   display: flex;
+  width: 100%;
 }
 #field-owner-type::picker-icon {
   content: "✦ ⤵";
@@ -736,6 +737,7 @@ select,
   border-radius: 8px;
   padding: 0.4rem;
   display: flex;
+  width: 100%;
 }
 #field-dato::picker-icon {
   content: "❀ ⤵";
@@ -890,7 +892,7 @@ select,
     position: absolute;
   }
   @media (width > 1600px) {
-    max-width: 255px;
+    max-width: 135px;
     height: auto;
     display: block;
     top: 50%;
