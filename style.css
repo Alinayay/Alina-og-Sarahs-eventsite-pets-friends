@@ -1117,3 +1117,87 @@ form {
     navigation: none;
   }
 }
+/* Light Mode og Dark Mode */
+
+html {
+  color-scheme: light;
+
+  --theme-bg: light-dark(#ffffff, #1b1b1b);
+  --theme-text: light-dark(#111111, #eeeeee);
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark .site-header {
+  background-color: #222222;
+}
+
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+}
+/* Farver til begge temaer */
+
+html {
+  --color-page: light-dark(#ffffff, #292929);
+  --color-blue: light-dark(#bbd8ea, #405a6b);
+  --color-hblue: light-dark(#e3f4ff, #293b48);
+  --color-dbrown: light-dark(#2f251f, #aaaaaa);
+}
+
+html.dark .full h2 {
+  color: #e0f0ff;
+}
+
+html.dark .site-logo {
+  background-color: #e3f4ff;
+  padding: 5px;
+  border-radius: 6px;
+}
+/* Dark Mode - ZOO sektionen */
+
+html.dark .full-z,
+html.dark .zoo {
+  background-color: #294e45;
+  color: #f4f3ef;
+}
+
+html.dark .full-z h2 {
+  color: #f4f3ef;
+}
+
+html.dark .zoo .plink {
+  color: #b8eed4;
+}
+/* Sol og måne knap */
+
+#theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Light Mode viser månen */
+#theme-btn .theme-sun {
+  display: none;
+}
+
+/* Dark Mode viser solen */
+html.dark #theme-btn .theme-moon {
+  display: none;
+}
+
+html.dark #theme-btn .theme-sun {
+  display: inline;
+}
